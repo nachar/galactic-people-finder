@@ -8,6 +8,7 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.js'],
+    ignores: ['**/*.test.js'],
     plugins: {
       lit: litPlugin,
       wc: wcPlugin,
@@ -44,6 +45,33 @@ export default [
         customElements: 'readonly',
         CustomEvent: 'readonly',
         fetch: 'readonly',
+      },
+    },
+  },
+  {
+    files: ['**/*.test.js'],
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      ...prettierConfig.rules,
+      'prettier/prettier': 'error',
+    },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        console: 'readonly',
+        document: 'readonly',
+        window: 'readonly',
+        customElements: 'readonly',
+        CustomEvent: 'readonly',
+        fetch: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        expect: 'readonly',
       },
     },
   },
