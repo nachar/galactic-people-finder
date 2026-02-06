@@ -72,6 +72,7 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         expect: 'readonly',
+        Event: 'readonly',
       },
     },
   },
