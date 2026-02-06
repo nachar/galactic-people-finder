@@ -43,6 +43,7 @@ export default [
         window: 'readonly',
         customElements: 'readonly',
         CustomEvent: 'readonly',
+        fetch: 'readonly',
       },
     },
   },
