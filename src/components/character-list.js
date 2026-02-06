@@ -37,11 +37,10 @@ class CharacterList extends LitElement {
     this.selectedCharacter = null;
   }
 
-  _openDialog(character) {
+  async _openDialog(character) {
     this.selectedCharacter = character;
-    this.updateComplete.then(() => {
-      this.shadowRoot.querySelector('dialog')?.showModal();
-    });
+    await this.updateComplete;
+    this.shadowRoot.querySelector('dialog')?.showModal();
   }
 
   _closeDialog() {
