@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import '../components/search-bar.js';
-import '../components/people-list.js';
+import '../components/character-list.js';
 import { RequestController } from '../controllers/request-controller.js';
 import { fetchStarWarsCharacterList } from '../services/swapi-service.js';
 
@@ -17,7 +17,7 @@ class AppMain extends LitElement {
 
     return html`
       <search-bar @search=${this._handleSearch}></search-bar>
-      ${this.starWarsCharacterList.success ? html`<people-list></people-list>` : ''}
+      ${this.starWarsCharacterList.success ? html`<character-list></character-list>` : ''}
     `;
   }
 }

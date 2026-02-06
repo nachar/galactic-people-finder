@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 
-class PeopleList extends LitElement {
+class CharacterList extends LitElement {
   render() {
     return html`
       <p>
@@ -11,4 +11,4 @@ class PeopleList extends LitElement {
   }
 }
 
-customElements.define('people-list', PeopleList);
+customElements.define('character-list', CharacterList);
