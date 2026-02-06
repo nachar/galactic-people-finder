@@ -12,13 +12,16 @@ class AppMain extends LitElement {
   }
 
   render() {
-    if (this.starWarsCharacterList.loading) return html`<p>Loading...</p>`;
-    if (this.starWarsCharacterList.error) return html`<p>Error loading data</p>`;
-
     return html`
       <search-bar @search=${this._handleSearch}></search-bar>
-      ${this.starWarsCharacterList.success
+
+      ${this.starWarsCharacterList.loading ? html`<p>Loading...</p>` : ''}
+      ${this.starWarsCharacterList.error ? html`<p>Error loading data. Please try again.</p>` : ''}
+      ${this.starWarsCharacterList.success && this.starWarsCharacterList.data?.length
         ? html`<character-list .characters=${this.starWarsCharacterList.data}></character-list>`
+        : ''}
+      ${this.starWarsCharacterList.success && !this.starWarsCharacterList.data?.length
+        ? html`<p>No characters found.</p>`
         : ''}
     `;
   }
