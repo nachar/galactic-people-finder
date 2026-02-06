@@ -54,11 +54,11 @@ class SearchBar extends LitElement {
       <form @submit=${this._onSubmit}>
         <input
           type="text"
-          placeholder="Buscar personaje (ej: luke)"
+          placeholder="Search character (e.g. Skywalker)"
           .value=${this.searchQuery}
           @input=${this._onInput}
         />
-        <button type="submit" ?disabled=${!this.searchQuery.trim()}>Buscar</button>
+        <button type="submit" ?disabled=${!this.searchQuery.trim()}>Search</button>
       </form>
     `;
   }
