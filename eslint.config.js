@@ -42,6 +42,7 @@ export default [
         document: 'readonly',
         window: 'readonly',
         customElements: 'readonly',
+        CustomEvent: 'readonly',
       },
     },
   },

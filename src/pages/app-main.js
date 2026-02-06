@@ -3,9 +3,13 @@ import '../components/search-bar.js';
 import '../components/people-list.js';
 
 class AppMain extends LitElement {
+  _handleSearch(e) {
+    console.log(e.detail.query);
+  }
+
   render() {
     return html`
-      <search-bar></search-bar>
+      <search-bar @search=${this._handleSearch}></search-bar>
       <people-list></people-list>
     `;
   }
