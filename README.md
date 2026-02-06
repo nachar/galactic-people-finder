@@ -86,6 +86,49 @@ yarn preview
 pnpm preview
 ```
 
+### Test
+
+Run tests:
+```bash
+npm run test
+```
+
+```bash
+yarn test
+```
+
+```bash
+pnpm test
+```
+
+Watch mode:
+
+```bash
+npm run test:watch
+```
+
+```bash
+yarn test:watch
+```
+
+```bash
+pnpm test:watch
+```
+
+Run tests with coverage:
+
+```bash
+npm run test:coverage
+```
+
+```bash
+yarn test:coverage
+```
+
+```bash
+pnpm test:coverage
+```
+
 ### Linting & Formatting
 
 Run ESLint:
