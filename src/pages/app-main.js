@@ -17,7 +17,9 @@ class AppMain extends LitElement {
 
     return html`
       <search-bar @search=${this._handleSearch}></search-bar>
-      ${this.starWarsCharacterList.success ? html`<character-list></character-list>` : ''}
+      ${this.starWarsCharacterList.success
+        ? html`<character-list .characters=${this.starWarsCharacterList.data}></character-list>`
+        : ''}
     `;
   }
 }
