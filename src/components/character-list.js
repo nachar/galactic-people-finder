@@ -7,27 +7,27 @@ class CharacterList extends LitElement {
   };
 
   static styles = css`
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
     li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem;
-      gap: 1rem;
+      border-bottom: 1px solid #eee;
     }
 
     button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
       cursor: pointer;
-      padding: 0.25rem 0.75rem;
+      padding: 1rem 0;
     }
 
-    dialog {
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    dialog::backdrop {
-      background-color: rgba(0, 0, 0, 0.5);
+    button:hover {
+      background: #f9f9f9;
     }
   `;
 
