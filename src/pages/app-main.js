@@ -1,10 +1,19 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import '../components/search-bar.js';
 import '../components/character-list.js';
 import { RequestController } from '../controllers/request-controller.js';
 import { fetchStarWarsCharacterList } from '../services/swapi-service.js';
 
 class AppMain extends LitElement {
+  static styles = css`
+    :host {
+      display: block;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+  `;
+
   starWarsCharacterList = new RequestController(this, fetchStarWarsCharacterList);
 
   _handleSearch({ detail }) {
